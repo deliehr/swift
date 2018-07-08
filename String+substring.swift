@@ -58,4 +58,13 @@ extension String {
         return substring(from: from, inclusiveTo: from + count, usingLengthGuard: isLengthGuardActive)
     }
     
+    /// Returns the rest of a string, beginning at index from
+    ///
+    /// - Parameters:
+    ///   - from: the inclusive start index
+    /// - Returns: a Substring as a String
+    func substring(from: Int) -> String? {
+        return substring(from: from, inclusiveTo: self.count - 1, usingLengthGuard: true)
+    }
+    
 }
