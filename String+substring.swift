@@ -28,8 +28,8 @@ extension String {
     func substring(from: Int, inclusiveTo to: Int) -> String? {
         guard from >= 0,
             to <= self.count - 1
-            else {
-                return nil
+        else {
+            return nil
         }
         
         let start = self.startIndex
@@ -40,19 +40,13 @@ extension String {
         return String(self[begin..<end])
     }
     
-    func substring(from: Int, count: Int) -> String {
-        let start = self.startIndex
-        
-        let maxCount: Int = count + from
-        
-        var endIndex: String.Index = start
-        for i in 0..<maxCount {
-            endIndex = str.index(after: endIndex)
-        }
-        
-        var substring = String(str[start..<endIndex])
-        substring = String(substring.suffix(from+1))
-        
-        return substring
+    /// Returns a part of a string, also known as substring
+    ///
+    /// - Parameters:
+    ///   - from: the inclusive start index
+    ///   - count: the amount of next elements
+    /// - Returns: a Substring as a String
+    func substring(from: Int, count: Int) -> String? {
+        return substring(from: from, inclusiveTo: from + count)
     }
 }
