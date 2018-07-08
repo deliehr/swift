@@ -8,6 +8,17 @@
 import Foundation
 
 extension String {
+    
+    /// Returns a part of a string, also known as substring
+    ///
+    /// - Parameters:
+    ///   - from: the inclusive start index
+    ///   - to: the exclusive end index
+    /// - Returns: a Substring as a String
+    func substring(from: Int, to: Int) -> String? {
+        return self.substring(from: from, inclusiveTo: to - 1)
+    }
+    
     // Returns a part of a string, also known as substring
     ///
     /// - Parameters:
