@@ -19,14 +19,18 @@ extension String {
         return self.substring(from: from, inclusiveTo: to - 1)
     }
     
-    // Returns a part of a string, also known as substring
+    /// Returns a part of a string, also known as substring
     ///
     /// - Parameters:
     ///   - from: the inclusive start index
     ///   - to: the inclusive end index
     /// - Returns: a Substring as a String
     func substring(from: Int, inclusiveTo to: Int) -> String? {
-        guard to <= self.count - 1 else { return nil }
+        guard from >= 0,
+            to <= self.count - 1
+            else {
+                return nil
+        }
         
         let start = self.startIndex
         
