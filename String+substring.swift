@@ -8,7 +8,9 @@
 import Foundation
 
 extension String {
-    func substring(from: Int, inclusiveTo to: Int) -> String {
+    func substring(from: Int, inclusiveTo to: Int) -> String? {
+        guard to <= self.count - 1 else { return nil }
+        
         let start = self.startIndex
         
         let begin = self.index(start, offsetBy: from)
