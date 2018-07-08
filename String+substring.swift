@@ -8,11 +8,11 @@
 import Foundation
 
 extension String {
-    func substring(from: Int, to: Int) -> String {
+    func substring(from: Int, inclusiveTo to: Int) -> String {
         let start = self.startIndex
         
         let begin = self.index(start, offsetBy: from)
-        let end = self.index(start, offsetBy: to)
+        let end = self.index(start, offsetBy: (to + 1))
         
         return String(self[begin..<end])
     }
