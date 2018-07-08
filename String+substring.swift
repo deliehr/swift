@@ -15,7 +15,7 @@ extension String {
     ///
     /// - Parameters:
     ///   - from: the inclusive start index
-    ///   - to: the exclusive end index
+    ///   - exclusiveTo: the exclusive end index
     /// - Returns: a Substring as a String
     func substring(from: Int, exclusiveTo to: Int, usingLengthGuard isLengthGuardActive: Bool = true) -> String? {
         return self.substring(from: from, inclusiveTo: to - 1, usingLengthGuard: isLengthGuardActive)
