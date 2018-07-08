@@ -8,6 +8,12 @@
 import Foundation
 
 extension String {
+    // Returns a part of a string, also known as substring
+    ///
+    /// - Parameters:
+    ///   - from: the inclusive start index
+    ///   - to: the inclusive end index
+    /// - Returns: a Substring as a String
     func substring(from: Int, inclusiveTo to: Int) -> String? {
         guard to <= self.count - 1 else { return nil }
         
